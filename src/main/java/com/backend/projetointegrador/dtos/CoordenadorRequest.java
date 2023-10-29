@@ -1,5 +1,4 @@
 package com.backend.projetointegrador.dtos;
-
 import jakarta.validation.constraints.NotBlank;
 
 public record CoordenadorRequest(

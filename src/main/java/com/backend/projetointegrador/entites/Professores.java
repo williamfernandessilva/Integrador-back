@@ -21,7 +21,7 @@ public class Professores {
 
     @Column(length = 20)
     private String telefone;
-
+    
     public Long getIdProfessores() {
         return idProfessores;
     }

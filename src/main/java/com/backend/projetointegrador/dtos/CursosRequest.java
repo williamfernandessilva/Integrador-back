@@ -1,6 +1,6 @@
 package com.backend.projetointegrador.dtos;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotBlank;
 
 public record CursosRequest(
-        @NotNull(message = "Nome do curso não pode estar em branco") String cursos) {
+        @NotBlank(message = "Nome do curso não pode estar em branco") String cursos) {
 }
