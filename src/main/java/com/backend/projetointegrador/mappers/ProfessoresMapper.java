@@ -11,8 +11,11 @@ public class ProfessoresMapper {
     public static Professores toEntity(ProfessoresRequest request) {
         Professores professor = new Professores();
         professor.setNome(request.nome());
-        professor.setEmail(request.email());
-        professor.setTelefone(request.telefone());
+        professor.setCurso(request.curso()); 
+        professor.setSemestre(request.semestre());
+        professor.setHorario(request.horario()); 
+        professor.setSala(request.sala()); 
+        professor.setData(request.data());
         return professor;
     }
 
@@ -20,8 +23,11 @@ public class ProfessoresMapper {
         return new ProfessoresResponse(
             professor.getIdProfessores(),
             professor.getNome(),
-            professor.getEmail(),
-            professor.getTelefone()
+            professor.getCurso(), 
+            professor.getSemestre(), 
+            professor.getHorario(), 
+            professor.getSala(), 
+            professor.getData()
         );
     }
 

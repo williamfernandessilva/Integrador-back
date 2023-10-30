@@ -1,34 +1,38 @@
 package com.backend.projetointegrador.entites;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "TBL_PROFESSORES")
 public class Professores {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_professores")
     private Long idProfessores;
 
-    @Column(length = 100)
+    @Column(length = 90)
     private String nome;
 
-    @Column(length = 100)
-    private String email;
+    @Column(length = 100, name = "cursos")
+    private String curso;
 
-    @Column(length = 20)
-    private String telefone;
-    
-    public Long getIdProfessores() {
-        return idProfessores;
-    }
+    @Column
+    private int semestre;
 
-    public void setIdProfessores(Long idProfessores) {
-        this.idProfessores = idProfessores;
-    }
+    @Column(length = 13, name = "horario")
+    private String horario;
+
+    @Column(length = 8, name = "salas")
+    private String sala;
+
+    @Column
+    private LocalDate data;
 
     public String getNome() {
         return nome;
@@ -38,21 +42,51 @@ public class Professores {
         this.nome = nome;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCurso() {
+        return curso;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCurso(String curso) {
+        this.curso = curso;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getSala() {
+        return sala;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setSala(String sala) {
+        this.sala = sala;
     }
 
-    
+    public Long getIdProfessores() {
+        return idProfessores;
+    }
+
+    public void setIdProfessores(Long idProfessores) {
+        this.idProfessores = idProfessores;
+    }
+
+    public int getSemestre() {
+        return semestre;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    public void setSemestre(int semestre) {
+        this.semestre = semestre;
+    }
 }

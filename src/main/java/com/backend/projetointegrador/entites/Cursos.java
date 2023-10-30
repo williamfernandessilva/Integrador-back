@@ -13,11 +13,22 @@ public class Cursos {
     @Column(name = "id_cursos")
     private Long id;
 
-    @Column(length = 100)
+    @Column(length = 100, name = "nome_cursos")
     private String cursos;
+
+    @Column(length = 50, name = "materia")
+    private String materia;
 
     public Long getId() {
         return id;
+    }
+
+    public String getMateria() {
+        return materia;
+    }
+
+    public void setMateria(String materia) {
+        this.materia = materia;
     }
 
     public void setId(Long id) {
@@ -31,6 +42,8 @@ public class Cursos {
     public void setCursos(String cursos) {
         this.cursos = cursos;
     }
+
+
     
 
 }
