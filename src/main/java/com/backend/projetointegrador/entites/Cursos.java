@@ -15,6 +15,22 @@ public class Cursos {
 
     @Column(length = 100)
     private String cursos;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(String cursos) {
+        this.cursos = cursos;
+    }
     
 
 }

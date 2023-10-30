@@ -5,4 +5,5 @@ public record SalasResponse(
         String tipo,
         int andar,
         int capacidade) {
+
 }
