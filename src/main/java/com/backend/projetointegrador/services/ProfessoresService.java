@@ -46,7 +46,6 @@ public class ProfessoresService {
             updateProfessor.setSala(professor.getSala());
             updateProfessor.setData(professor.getData());
             updateProfessor.setCurso(professor.getCurso());
-            updateProfessor.setSemestre(professor.getSemestre());
             updateProfessor.setMateria(professor.getMateria());
             updateProfessor.setHorario(professor.getHorario());
             this.repository.save(updateProfessor);

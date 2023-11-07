@@ -48,7 +48,7 @@ public class ProfessoresController {
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(savedProfessor.ra())
+                .buildAndExpand(savedProfessor.id())
                 .toUri();
 
         return ResponseEntity.created(location).body(savedProfessor);

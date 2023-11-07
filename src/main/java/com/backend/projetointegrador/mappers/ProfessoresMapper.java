@@ -12,7 +12,6 @@ public class ProfessoresMapper {
         Professores professor = new Professores();
         professor.setNome(request.nome());
         professor.setCurso(request.curso());
-        professor.setSemestre(request.semestre());
         professor.setMateria(request.materia()); 
         professor.setHorario(request.horario()); 
         professor.setSala(request.sala()); 
@@ -22,10 +21,9 @@ public class ProfessoresMapper {
 
     public static ProfessoresResponse toDTO(Professores professor) {
         return new ProfessoresResponse(
-            professor.getRa(),
+            professor.getId(),
             professor.getNome(),
             professor.getCurso(), 
-            professor.getSemestre(), 
             professor.getMateria(),
             professor.getHorario(), 
             professor.getSala(), 

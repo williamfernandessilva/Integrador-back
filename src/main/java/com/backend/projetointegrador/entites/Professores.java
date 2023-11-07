@@ -1,9 +1,10 @@
 package com.backend.projetointegrador.entites;
 
-import java.time.LocalDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -11,7 +12,8 @@ import jakarta.persistence.Table;
 @Table(name = "TBL_PROFESSORES")
 public class Professores {
     @Id
-    private Long ra;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(length = 90)
     private String nome;
@@ -20,13 +22,10 @@ public class Professores {
     private String sala;
 
     @Column
-    private LocalDate data;
+    private String data;
 
     @Column(length = 100, name = "curso")
     private String curso;
-
-    @Column(name ="semestre")
-    private int semestre;
 
     @Column(length = 80, name = "matéria")
     private String materia;
@@ -34,13 +33,7 @@ public class Professores {
     @Column(length = 13, name = "horário")
     private String horario;
 
-    public Long getRa() {
-        return ra;
-    }
-
-    public void setRa(Long ra) {
-        this.ra = ra;
-    }
+    
 
     public String getNome() {
         return nome;
@@ -58,14 +51,6 @@ public class Professores {
         this.sala = sala;
     }
 
-    public LocalDate getData() {
-        return data;
-    }
-
-    public void setData(LocalDate data) {
-        this.data = data;
-    }
-
     public String getCurso() {
         return curso;
     }
@@ -74,13 +59,6 @@ public class Professores {
         this.curso = curso;
     }
 
-    public int getSemestre() {
-        return semestre;
-    }
-
-    public void setSemestre(int semestre) {
-        this.semestre = semestre;
-    }
 
     public String getMateria() {
         return materia;
@@ -97,6 +75,21 @@ public class Professores {
     public void setHorario(String horario) {
         this.horario = horario;
     }
-    
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
 }
