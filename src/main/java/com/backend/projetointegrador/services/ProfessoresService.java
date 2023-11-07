@@ -47,6 +47,7 @@ public class ProfessoresService {
             updateProfessor.setData(professor.getData());
             updateProfessor.setCurso(professor.getCurso());
             updateProfessor.setSemestre(professor.getSemestre());
+            updateProfessor.setMateria(professor.getMateria());
             updateProfessor.setHorario(professor.getHorario());
             this.repository.save(updateProfessor);
         } catch (EntityNotFoundException e) {

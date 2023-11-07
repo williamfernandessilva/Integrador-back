@@ -1,1 +1,1 @@
-INSERT INTO TBL_PROFESSORES(nome, cursos, semestre, horario, salas, data) VALUES ('João Silva', 'Matemática', 2, '08:00 - 10:00', 'Sala 101', '2023-10-30');
+INSERT INTO TBL_PROFESSORES(ra, nome, salas, data, curso, semestre, matéria, horário) VALUES ( '81273813','Glauco Todesco', 'Laboratorio 6','2023-11-07','Desenvolvimento de Sistemas', 2, 'Programação Web', '13:40 - 16:50');

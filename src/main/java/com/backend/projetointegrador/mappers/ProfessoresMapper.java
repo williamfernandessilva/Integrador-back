@@ -11,8 +11,9 @@ public class ProfessoresMapper {
     public static Professores toEntity(ProfessoresRequest request) {
         Professores professor = new Professores();
         professor.setNome(request.nome());
-        professor.setCurso(request.curso()); 
+        professor.setCurso(request.curso());
         professor.setSemestre(request.semestre());
+        professor.setMateria(request.materia()); 
         professor.setHorario(request.horario()); 
         professor.setSala(request.sala()); 
         professor.setData(request.data());
@@ -21,10 +22,11 @@ public class ProfessoresMapper {
 
     public static ProfessoresResponse toDTO(Professores professor) {
         return new ProfessoresResponse(
-            professor.getIdProfessores(),
+            professor.getRa(),
             professor.getNome(),
             professor.getCurso(), 
             professor.getSemestre(), 
+            professor.getMateria(),
             professor.getHorario(), 
             professor.getSala(), 
             professor.getData()
